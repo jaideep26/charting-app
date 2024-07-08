@@ -1,11 +1,19 @@
-import GraphCard from "../GraphCard/GraphCard";
+import { Container, Grid } from "@mui/material";
+import Curve from "../Curve/Curve";
 
 export default function Body() {
-    return (
-      <main>
-        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <GraphCard/>
-        </div>
-      </main>
-    );
-  }
+  return (
+    <Grid container spacing={2}>
+      <Grid item xs={6}>
+        <Container className="custom-graph">
+          <Curve/>
+        </Container>
+      </Grid>
+      <Grid item xs={6}>
+        <Container>
+          Description of Graph.
+        </Container>
+      </Grid>
+    </Grid>
+  );
+}
